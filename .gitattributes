@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# leave gradlew lf for docker use
+gradlew text eol=lf
