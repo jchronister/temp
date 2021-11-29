@@ -1,13 +1,15 @@
-package simplewebappspringboot.demo;
+package com.example.restApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
+// Test App Loads
 @SpringBootTest
-class DemoApplicationTests {
+public class WebApplicationTest {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
