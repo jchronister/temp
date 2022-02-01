@@ -15,9 +15,10 @@ environment {
             // dir("finch-backend/greeting-service") {
             // sh "docker build -t greeting-service:${BUILD_NUMBER} ."
             // }
-            dockerImage = docker.build("finch-backend/greeting-service")
-            // app = 1
-            // app = docker.build("finch-backend/greeting-service")
+            script {
+            dockerImage = docker.build("finch-backend/greeting-service:${BUILD_NUMBER}")
+            }
+         
           }
         }
 
@@ -25,7 +26,7 @@ environment {
           steps {
             // sh "docker version"
             echo "app"
-            // sh 'docker -v'
+             sh 'docker -v'
              
             // app = docker.build("finch-backend/greeting-service")
           }
