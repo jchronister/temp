@@ -16,7 +16,7 @@ environment {
             // sh "docker build -t greeting-service:${BUILD_NUMBER} ."
             // }
             script {
-            dockerImage = docker.build("jrctest/greeting-service:${BUILD_NUMBER}")
+            dockerImage = docker.build("jrctest:greeting-service${BUILD_NUMBER}")
             }
          
           }
