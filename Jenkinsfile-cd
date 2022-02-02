@@ -24,13 +24,28 @@ environment {
 
         stage('echo') {
           steps {
-            // sh "docker version"
-            echo "app"
              sh 'docker -v'
-             
-            // app = docker.build("finch-backend/greeting-service")
           }
         }
+        
+             stage('Deploy image') {
+         steps{
+            script{
+                 docker.withRegistry("$awsECR", 'ecr:us-east-1:jrc-ecr') {
+                     dockerImage.push()
+                 }
+             }
+         }
+     }
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
     }
 }
