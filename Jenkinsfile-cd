@@ -31,7 +31,7 @@ environment {
              stage('Deploy image') {
          steps{
             script{
-                 docker.withRegistry("$awsECR", 'ecr:us-east-1:jrc-ecr') {
+                 docker.withRegistry("https://${awsECR}", 'ecr:us-east-1:jrc-ecr') {
                      dockerImage.push()
                  }
              }
